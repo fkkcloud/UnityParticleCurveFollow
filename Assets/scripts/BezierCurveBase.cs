@@ -73,7 +73,7 @@ public class BezierCurveBase : MonoBehaviour
         {
             P0 = GameObject.CreatePrimitive(PrimitiveType.Cube);
             P0.transform.parent = transform;
-            P0.transform.position = new Vector3(transform.position.x + 10f, 0f, 0f);
+			P0.transform.localPosition = new Vector3(10f, 0f, 0f);
             P0.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
             P0.name = "P0";
         }
@@ -81,7 +81,7 @@ public class BezierCurveBase : MonoBehaviour
         {
             P1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
             P1.transform.parent = transform;
-            P1.transform.position = new Vector3(transform.position.x - 10f, 0f, 0f);
+			P1.transform.localPosition = new Vector3(-10f, 0f, 0f);
             P1.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
             P1.name = "P1";
         }
@@ -89,7 +89,7 @@ public class BezierCurveBase : MonoBehaviour
         {
             P0_Tangent = GameObject.CreatePrimitive(PrimitiveType.Cube);
             P0_Tangent.transform.parent = transform;
-            P0_Tangent.transform.position = new Vector3(transform.position.x + 10f, 0f, 10f);
+			P0_Tangent.transform.localPosition = new Vector3(10f, 0f, 10f);
             P0_Tangent.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
             P0_Tangent.name = "P0_Tangent";
             P0_Tangent.transform.SetParent(P0.transform);
@@ -99,7 +99,7 @@ public class BezierCurveBase : MonoBehaviour
         {
             P1_Tangent = GameObject.CreatePrimitive(PrimitiveType.Cube);
             P1_Tangent.transform.parent = transform;
-            P1_Tangent.transform.position = new Vector3(transform.position.x - 10f, 0f, -10f);
+			P1_Tangent.transform.localPosition = new Vector3(-10f, 0f, -10f);
             P1_Tangent.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
             P1_Tangent.name = "P1_Tangent";
             P1_Tangent.transform.SetParent(P1.transform);
